@@ -1,0 +1,507 @@
+import time
+import random
+import sys
+def game():
+    def type(str):
+        for letter in str:
+            print(letter,end="")
+            sys.stdout.flush()
+            time.sleep(random.random()/5.5)
+    def fasttype(str):
+        for letter in str:
+            print(letter,end="")
+            sys.stdout.flush()
+            time.sleep(random.random()/120)
+    def question():
+        answer = input("\n\nJohnivart Eguene: ")
+        return answer
+    # PATHS
+
+    def day2c():
+        time.sleep(1)
+        type("\n\n\nWillhehim Goodman: Well we surely need something to pass the time.")
+        time.sleep(2.4)
+        type("\nTerra Cruise: Lets watch a movie.")
+        time.sleep(1)
+        type("\nHenry Kingsman: How about pinocchio?")
+        time.sleep(0.3)
+        type("\nSilvia Tomson: No, lets watch a SCARY movie.")
+        time.sleep(1.1)
+        type("\n\n\n")
+        time.sleep(0.1)
+        type("\nWillhehim Goodman: What do you think detective?")
+        fasttype("\n\nTerra Cruise: Oh gosh decide already! You have two options scary or pinocchio.")
+
+        answer = question()
+
+        while True:
+            if answer != "scary" and answer != "pinnochio":
+                time.sleep(0.5)
+                answer = question()
+            else:
+                break
+
+        if answer == "pinnochio":
+            time.sleep(2)
+            type("\n\n\nNoir Narrator: The film was rather boring.")
+            time.sleep(1.3)
+            fasttype("\nJim Kingsman: Reminds me of my newest film.")
+            fasttype("\nWillhehim Goodman: Shutup!")
+            time.sleep(1.2)
+            type("\n\n\nNoir Narrator: The film finished.")
+            type("\nWillhehim Goodman: Alright have you come to a conclusion yet detective?")
+            answer = question()
+            while True:
+                if answer != "Henry Kingsman":
+                    time.sleep(0.5)
+                    fasttype("\n\nKABOOM!!!")
+                    time.sleep(0.1)
+                    type("\n\nNoir Narrator: The entire manor blew with the criminal on the inside.")
+                    type("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+                    print("Credits:")
+                    type("\n\nHobie G Uriona")
+                    type("\n\n\n\nThe End...")
+                else:
+                    type("\n\nNoir Narrator: Henry Kingsman was the murderer. He was put to justice")
+                    type("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+                    print("Credits:")
+                    type("\n\nHobie G Uriona")
+                    type("\n\n\n\nThe End...")
+        elif answer == "scary":
+            time.sleep(2)
+            type("\n\n\nNoir Narrator: tensions only rose due to this choice...")
+            time.sleep(3.2)
+            type("\n\nHolly Day: I do not like scary movies it feels rather innapropriate.")
+            type("\nWillhehim Goodman: Alright have you come to a conclusion yet detective?")
+            answer = question()
+            while True:
+                if answer != "Henry Kingsman":
+                    time.sleep(0.5)
+                    fasttype("\n\nKABOOM!!!")
+                    time.sleep(0.1)
+                    type("\n\nNoir Narrator: The entire manor blew with the criminal on the outside.")
+                    type("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+                    print("Credits:")
+                    type("\n\nHobie G Uriona")
+                    type("\n\n\n\nThe End...")
+                else:
+                    type("\n\nNoir Narrator: Henry Kingsman was the murderer. He was put to justice after much struggle and the sacrifice of Willhehims life.")
+                    type("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+                    print("Credits:")
+                    type("\n\nHobie G Uriona")
+                    type("\n\n\n\nThe End...")
+
+
+    def day2a():
+        time.sleep(1.3)
+        type("\n\n\n")
+        time.sleep(1.5)
+        type("Jim Kingsman: Well because of my new roll in...")
+        fasttype("\nTerra Cruise: NOT THE TIME!")
+        time.sleep(1)
+        type("\nSilvia Tomson: Sheesh can she chill out?")
+        time.sleep(0.2)
+        type("\nTerra Cruise: Hey Silvia.")
+        time.sleep(1.2)
+        type("\nSilvia Tomson: Ye...")
+        fasttype("\nTerra Cruise: SHUT UP!")
+        time.sleep(2)
+        type("\n\nJim Kingsman: Im ordering pizza what kind yall want?")
+        time.sleep(1.3)
+        type("\nThey got pepperoni, cheese, hawwain, and... ")
+        time.sleep(1.2)
+        type("Curry?")
+        time.sleep(1)
+        type("\nWhat do you think Detective?")
+
+        answer = question()
+
+        while True:
+            if answer != "pepperoni" and answer != "cheese" and answer !="curry" and answer !="hawwain":
+                type("\n\nJim Kingsman: For real its your choice.")
+                time.sleep(0.5)
+                answer = question()
+            else:
+                break
+
+        if answer == "pepperoni":
+            time.sleep(2)
+            type("\n\n\nNoir Narrator: The rest of the noon was peaceful, they all ate their slice and remained rather quiet.")
+            time.sleep(1.2)
+            type("\n\nHenry Kingsman: Well this pizza isn't too ba...")
+            fasttype("\nJim Kingsman: Reminds me of my newest film.")
+            day2c()
+        elif answer == "cheese":
+            time.sleep(2)
+            type("\n\n\nNoir Narrator: The rest of the noon was peaceful, but the pizza was pretty bland.")
+            time.sleep(1.2)
+            type("\n\nHolly Day: This is pretty good!")
+            day2c()
+        elif answer == "hawwain":
+            time.sleep(2)
+            type("\n\n\nNoir Narrator: The noon soon broke out in chaos, and the pizza was the worst.")
+            time.sleep(1.2)
+            type("\n\nTerra Cruise: Its not me, it HAS TO BE Henry!")
+            fasttype("\nSilvia Tomson: SOUNDS LIKE A MURDERER TO ME")
+            time.sleep(0.7)
+            type("\nKim Tellheart: Please don't say that word.")
+            type("\nJim Kingsman: What murderer, what you are.")
+            time.sleep(1)
+            type("\nWillhehim Goodman: Leave the lady be. ")
+            time.sleep(1)
+            type("Shes already troubled enough.")
+            time.sleep(0.5)
+            type("\nHenry Kingsman: It was Terra.")
+            fasttype("\nTerra Cruise: NO YOU!")
+            type("\n\nJim Kingsman: I think its Kim.")
+            time.sleep(1)
+            fasttype("\n\nKim Tellheart: THATS IT! EVERYBODY SHUT UP!")
+            day2c()
+        elif answer == "curry":
+            time.sleep(2)
+            type("\n\n\nNoir Narrator: The rest of the noon was pretty \x1B[3mchill\x1B[0m ")
+            time.sleep(1.2)
+            type("\x1B[3mas kids these days would say.\x1B[0m")
+            time.sleep(1.1)
+            type("\n\nHowever, the pizza was the best pizza any of them have ever had.")
+            day2c()
+
+
+
+    def day2b():
+        time.sleep(1.3)
+        type("\n\nNoir Narrator: The policemen arrived soon after and Henry was behind bars quicker then you can say ")
+        fasttype("pneumonoultramicroscopicsilicovolcanoconiosis.")
+        time.sleep(3)
+        type("\n\n\nNoir Narrator: Soon after the group went to visit Willhehim in the hospital. ")
+        fasttype("\x1B[3mExcept for Jim who went back to america to film his newest movie.\x1B[0m")
+        time.sleep(2.5)
+        type("Willhehim Goodman: You really shouldn't have, I'm fine. He didn't get anything important.")
+        time.sleep(0.9)
+        type("\nOh, and thank you Detective. Your a good man.")
+        type("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+        print("Credits:")
+        type("\n\nHobie G Uriona")
+        type("\n\n\n\nThe End...")
+
+
+
+    def day2():
+        time.sleep(2.3)
+        type("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+        type("-> DAY TWO <-\n\n")
+        time.sleep(1)
+        type("Jim Kingsman: *Yawns*")
+        type("\nOkay. ")
+        time.sleep(0.7)
+        type("Gooooooooooooooooooood morning everyone. \x1B[3mA direct quote from my newest film.\x1B[0m")
+        time.sleep(1.5)
+        type("\nEveryone: Shut up.")
+        time.sleep(0.5)
+        type("\nSilvia Tomson: five more minutes...")
+        time.sleep(0.4)
+        type("\nHolly Day: Good morning Jim... *Lipbite*")
+        time.sleep(1.3)
+        type("\n\nWillhehim Goodman: Well its a new day. ")
+        time.sleep(1.6)
+        type("But just out of curiosity, who dunnit?")
+        type("\nEveryone: Yeah who?")
+        time.sleep(1)
+
+        answer = question()
+
+        while True:
+            if answer != "Willhehim Goodman" and answer != "Jim Kingsman" and answer != "Silvia Tomson" and answer != "Henry Kingsman" and answer != "Terra Cruise" and answer != "Kim Tellheart" and answer != "Holly Day" and answer != "Tal Kingsman":
+                type("\n\nEverybody: Oh, out with it already!")
+                time.sleep(0.5)
+                answer = question()
+            else:
+                break
+
+        if answer == "Willhehim Goodman":
+            time.sleep(2)
+            type("\n\nWillhehim Goodman: Surely not. You dont really think that do you?")
+            time.sleep(1)
+            type("\nI... have no words.")
+            day2a()
+        elif answer == "Jim Kingsman":
+            time.sleep(2)
+            type("\n\nHolly Day: No, no. he wouldn't kill his brother.")
+            day2a()
+        elif answer == "Silvia Tomson":
+            time.sleep(2)
+            type("\n\nSilvia Tomson: Your not as smart as you look are you?")
+            time.sleep(0.6)
+            type("\nIts obviously Terra.")
+            day2a()
+        elif answer == "Henry Kingsman":
+            time.sleep(2)
+            type("\n\nHenry Kingsman: Finnaly someone aknowledges me.")
+            time.sleep(1.5)
+            type("\nJim Kingsman: Don't be posh, he is not cappable of anything, ")
+            time.sleep(1)
+            type("definitly not murder.")
+            time.sleep(2)
+            fasttype("\n\nHenry Kingsman: That")
+            type(" is what you would think.")
+            time.sleep(0.5)
+            type("\n\nJim Kingsman: What no. you wouldn't...")
+            time.sleep(1)
+            fasttype("\n\nHenry Kingsman: You always stole the spotlight! ")
+            type("AND SO DID HE!")
+            time.sleep(0.4)
+            fasttype("\n\nNoir Narrator: ")
+            fasttype("Henry leaped across the room like a feind! ")
+            time.sleep(1)
+            type("\nHis eyes... ")
+            time.sleep(2.4)
+            type("His eyes are how you could tell his sanity had gone.")
+            time.sleep(1)
+            fasttype("\nHe looked like an animal his eyes BLOODSHOT, his hands reaching like claws! ")
+            fasttype("\nHe was proppeled through the air, landing on his brother, knocking him down, grasping his brothers neck like it was his lifeline!")
+            time.sleep(0.6)
+            fasttype(" His hands trembling as he sucked the life out of his brother!")
+            time.sleep(3)
+            type("\n\nHolly Day: JIM!")
+            type("\n\nNoir Narrator: The brother lied there ")
+            time.sleep(1)
+            type("dead ")
+            time.sleep(1)
+            type("as a ")
+            time.sleep(1)
+            type("doornail")
+            time.sleep(1)
+            type(".")
+            time.sleep(3)
+            type("\n\nHenry Kingsman: Sorry you all saw that, ")
+            time.sleep(0.5)
+            type("but I need to kill all of you now.")
+            time.sleep(1.2)
+            type("Noir Narrator: The man \x1B[3mif you could even call him that anymore\x1B[0m pulled a knife out of his right pocket!")
+            time.sleep(0.6)
+            fasttype("\nHe leapt into action running right at the detective!")
+            time.sleep(0.5)
+            type("\nBut... But what is this,")
+            time.sleep(1.5)
+            fasttype(" the stab was blocked by Willhehim!")
+            time.sleep(1)
+            type("\n Willhehim grasped the knife firmly as the detective quickly handcuffed Henry.")
+            time.sleep(0.8)
+            type("\n\nEverything finnaly calmed down after that.")
+            time.sleep(1.4)
+            type(" Everybody tended to Willhehim.")
+            time.sleep(2)
+            type("Except for Holly who was mourning Jim \x1B[3mwho was acting.\x1B[0m")
+            time.sleep(1)
+            day2b()
+        elif answer == "Holly Day":
+            time.sleep(2)
+            type("\n\nJim Kingsman: No, no. she wouldn't kill my favorite brother.")
+            day2a()
+        elif answer == "Tal Kingsman":
+            time.sleep(2)
+            type("\n\nEveryone: A sucide?")
+            time.sleep(1)
+            type("\nJim Kingsman: No, my favorite brother was happy.")
+            day2a()
+        elif answer == "Terra Cruise":
+            fasttype("\n\nTerra Cruise: I DIDN'T do it ")
+            time.sleep(0.7)
+            type("and if any of you say that again ")
+            fasttype("I'LL KILL YOU!")
+            day2a()
+        elif answer == "Kim Tellheart":
+            time.sleep(2)
+            type("\n\nWillhehim Goodman: Yeah that does make sense.")
+            type("\nKim Tellheart: No, it wasn't me you can bear witness right Eguene?")
+            answer = question()
+
+            while True:
+                if answer != "yes" and answer != "no":
+                    type("\n\nKim Tellheart: Please detective!")
+                    time.sleep(0.5)
+                    answer = question()
+                else:
+                    break
+
+            if answer == "yes":
+                type("\n\nKim Tellheart: See everyone?!")
+            elif answer == "no":
+                fasttype("\n\nKim Tellheart: Oh come off of it!")
+
+            day2a()
+
+
+    def day1a():
+        type("\n\nNoir Narrator: Johnivart was lead into a dark room.\nThere are only four rooms in the cabin, the front room \x1B[3mwhich he was just in\x1B[0m and, the back two rooms \x1B[3mthe kitchen and, the bunkroom\x1B[0m and then...")
+        time.sleep(1)
+        type("\nFinnaly, there is the attic where the body lies peacfully.")
+        time.sleep(2)
+        type("\n\nWillhehim Goodman: Well there he is, Tal Kingsman. ")
+        time.sleep(0.8)
+        type("Feel pretty bad for the fine lad.")
+        type("\nNoir Narrator: A large tear swells up on Willhehims eye.\nIt traverses his face slowly.")
+        fasttype("\nWillhehim Goodman: NO IT DOES NOT! Shut up chap.")
+        time.sleep(2)
+        type("\n\nSilvia Tomson: Who you talking to bud?")
+        time.sleep(1)
+        type("\nWillhehim Goodman: Uh... ")
+        time.sleep(1.7)
+        type("The poor chap who died thats who.\n             \nYES I am talking to a dead body.\nThat is what happened. Thats what.")
+        time.sleep(0.6)
+        type("\nJim Kingsman: Okay my friend lets stop speaking to spirits, ")
+        time.sleep(0.4)
+        type("and head home before things get worse.")
+        time.sleep(1.5)
+        type("\nTerra Cruise: NO! ")
+        time.sleep(0.5)
+        type("NOBODY is going ANY-where.\n")
+        time.sleep(1)
+        type("Noir Narrator: Everbody walked down stairs. There was something astir, you could feel it in the air.")
+        type("\nWillhehim Goodman: ˢʰᵘˢʰ\n")
+        time.sleep(1.5)
+        day1b()
+
+    def day1b():
+        time.sleep(3)
+        type("\n\nWillhehim Goodman: Alright its about time we all get some rest. Dont you agree lad?")
+        answer = question()
+
+        while True:
+            if answer != "yes" and answer != "no":
+                type("\nWillhehim Goodman: Come again lad?")
+                time.sleep(0.8)
+                type("\nKim Tellheart: ˢᵗʳᵃⁿᵍᵉ ᵐᵃⁿ ʰᵉ ᶦˢ")
+                answer = question()
+            else:
+                break
+
+        if answer == "yes":
+            time.sleep(1.8)
+            type("\n\nNoir Narrator: They all went to bed. Some to the bunkroom, some in the living room. But somebody was still lurking afterdark...\n")
+            day2()
+        elif answer == "no":
+            time.sleep(1.8)
+            type("\n\nNoir Narrator: Johnivart stayed steadily awake as the others drifted off... Some in the bunkroom, some in the living room. But Kim Tellheart was still lurking afterdark!")
+            time.sleep(1)
+            fasttype("\n\nKim Tellheart: Oh my detective!\n")
+            time.sleep(1)
+            type("I promise its not what it looks like!\n")
+            time.sleep(0.5)
+            type("Do you beleive me?")
+
+            answer = question()
+
+            while True:
+                if answer != "yes" and answer != "no":
+                    type("\n\nKim Tellheart: ˢᵗʳᵃⁿᵍᵉ ᵐᵃⁿ ʰᵉ ᶦˢ\n")
+                    time.sleep(0.5)
+                    fasttype("AAH!")
+                    time.sleep(1)
+                    type("\nWhat were you saying?")
+                    answer = question()
+                else:
+                    break
+
+            if answer == "yes":
+                type("\n\nKim Tellheart: thank goodness! somebody is following me! ")
+                time.sleep(0.9)
+                type("Nobody beleives me...")
+                time.sleep(2)
+                type("\n\nNoir Narrator: The detective would stay awake, so he gave her his word that nobody would hurt her.\nHe always had a soft spot for genuine people.")
+                time.sleep(2)
+
+                day2()
+            elif answer == "no":
+                type("\n\nKim Tellheart: But sir!")
+                time.sleep(0.7)
+                type("\n\nNoir Narrator: The Woman fainted right before his eyes.\nThe rest of the night he stayed alert.")
+                day2()
+
+
+    # INTRO TEXT
+    print("\n█▄ ▄█ ███        ███\n█ █ █ █▄         █▄ \n█   █ █ █   ▀    █▄▄\n")
+    time.sleep(2)
+    print("*Intense music*")
+    time.sleep(3)
+    type("\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+    type("Willhehim Goodman: Detective Eguene...\n")
+    time.sleep(1.5)
+    type("Detective. Detective! DETECTIVE!\n")
+    time.sleep(0.5)
+    type("WAKE UP THERE HAS BEEN A MURDER!\n")
+    time.sleep(1.2)
+    type("\n\n...")
+    time.sleep(2)
+
+    # WILL YOU PLAY
+    type("\n\n\nAhem.\n\nWell will you take the case?")
+    answer = question()
+    while True:
+        if answer != "yes" and answer != "no":
+            type("\nWillhehim Goodman: Come again?")
+            answer = question()
+        else:
+            break
+
+    # PLAY GAME
+    if answer == "yes":
+        type("\nWillhehim Goodman: Splendid!")
+        time.sleep(1)
+        type("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+        type("-> DAY ONE <-\n\n")
+        time.sleep(2)
+        type("Noir Narrator: Willhehim drove Eguene to the crime scene...\nIt was a rainy night, the detective looked around the cabin. He had the cabin locked up so the ")
+        time.sleep(2)
+        fasttype("M̵̟̥̩̬͔̫̿͐͆̔͜U̵̧̞̭̮͕̻͚̓̾R̸̳̭̓̈̎͑̄̕Ḑ̶̋̐̄̚͜Ę̴̙͎͔̯̓̆̀̓͆R̸̙͙̺̾͛Ẹ̶̓R ")
+        time.sleep(0.07)
+        type("couldn't escape.")
+        type("\n\nWillhehim Goodman: Nobody left the party. Not to worry Eguene. ")
+        time.sleep(0.5)
+        type("\nJim Kingsman: Who is this bloke. ")
+        type("\nSilvia Tomson: That \x1B[3mbloke\x1B[0m is a \x1B[3mdetective\x1B[0m you fool.\n")
+        type("\nHenry Kingsman: Who killed him then? ")
+        time.sleep(0.5)
+        type("Not to point fingers but I thi... ")
+        fasttype("\nTerra Cruise: Are you SH- ")
+        type("\nKim Tellheart: Language! ")
+        type("\nTerra Cruise: I DIDN'T DO IT!\n")
+        time.sleep(1)
+        type("\nHolly day: Sure ya didn't. ")
+        type("\nTerra Cruise: WHY WOULD I?")
+        time.sleep(1.5)
+        type("\nWillhehim Goodman: Alrighty then.\nYou have now met everybody. ")
+        time.sleep(1)
+        type("Oh wait! You haven't become aquanted with the victim.")
+        time.sleep(2)
+        type("\nEveryone: ...\n")
+        time.sleep(0.7)
+        type("Willhehim Goodman: well I don't mean to tell you how to do your job... ")
+        time.sleep(0.5)
+        type("but don't you wan't to see the evidence?")
+        answer = question()
+
+        while True:
+            if answer != "yes" and answer != "no":
+                type("Everyone: What is he talking about.")
+                answer = question()
+            else:
+                break
+
+        if answer == "yes":
+            day1a()
+        elif answer == "no":
+            day1b()
+
+    # END GAME RIGHT AWAY    
+    elif answer == "no":
+        type("\nWillhehim Goodman: But... ")
+        time.sleep(1)
+        type("I... ")
+        time.sleep(0.2)
+        type("Oh!")
+        type("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+        print("Credits:")
+        type("\n\nHobie G Uriona")
+        type("\n\n\n\nThe End...")
+game()
